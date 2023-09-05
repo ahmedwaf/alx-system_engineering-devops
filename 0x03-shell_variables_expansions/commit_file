@@ -1,0 +1,2 @@
+#!/bin/bash
+git add . && git commit -m "this third task of shell" && git push

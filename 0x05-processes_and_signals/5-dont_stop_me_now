@@ -12,3 +12,4 @@ if [[ -z "$pid" ]]; then
 kill -INT "$pid"
 
 fi
+^c

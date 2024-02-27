@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #disply a bash script
+# Trap the SIGTERM signal (typically sent by Ctrl+C or kill)
+trap 'echo "I am invincible!!!"' 15
 while "true"
 do
 	echo "To infinity and beyond"
 	sleep 2
 done
-# Trap the SIGTERM signal (typically sent by Ctrl+C or kill)
-trap 'echo "Received SIGTERM signal. Exiting gracefully..." && exit 0' SIGTERM

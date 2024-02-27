@@ -1,1 +1,13 @@
 #!/usr/bin/env bash
+while true; do
+	  echo "anything"
+	    sleep 2
+
+	      # Add a condition to break out of the loop
+	        read -p "Press 'q' to quit: " input
+		  if [[ $input == "q" ]]; then
+			      break
+			        fi
+			done
+
+			echo "Loop exited."

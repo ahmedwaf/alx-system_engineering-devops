@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Replace "This is what you typed!"
-for i in {1..10}; do
+for i in {1..10}; 
+do
 	  echo "To infinity and beyond"
 	  sleep 2
   done

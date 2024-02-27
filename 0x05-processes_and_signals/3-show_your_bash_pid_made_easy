@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#dispaly pid with name
+pgrep -l bash

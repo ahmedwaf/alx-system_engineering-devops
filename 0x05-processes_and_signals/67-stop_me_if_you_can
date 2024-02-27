@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#kill the task 7  without kill
+pkill -15 "bash ./7-highlander" -f

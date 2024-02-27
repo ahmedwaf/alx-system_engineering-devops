@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-while true; do
-	  echo "anything"
-	    sleep 2
+# Get the PID of the running "4-to_infinity_and_beyond" script
+# Use "pgrep" to find the process with the exact name
+pid=$(pgrep -f "4-to_infinity_and_beyond")
 
-	      # Add a condition to break out of the loop
-	        read -p "Press 'q' to quit: " input
-		  if [[ $input == "q" ]]; then
-			      break
-			        fi
-			done
+# Check if the process was found
+if [[ -z "$pid" ]]; then
+	  echo "Process 4-to_infinity_and_beyond not found"
+	    exit 1
+fi
 
-			echo "Loop exited."
+# Send SIGINT signal to the process with the found PID
+kill -INT "$pid"

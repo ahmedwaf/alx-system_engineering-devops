@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#!/bin/bash
 
 # Show all processes, including without TTY
 ps -eo pid,user,comm,ppid,%cpu,%mem,args

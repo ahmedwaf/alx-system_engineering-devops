@@ -7,7 +7,8 @@ pid=$(pgrep -f "4-to_infinity_and_beyond")
 if [[ -z "$pid" ]]; then
 	  echo "Process 4-to_infinity_and_beyond not found"
 	    exit 1
-fi
 
 # Send SIGINT signal to the process with the found PID
 kill -INT "$pid"
+
+fi

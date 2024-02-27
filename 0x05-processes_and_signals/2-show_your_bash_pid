@@ -1,17 +1,4 @@
 #!/usr/bin/env bash
-
 # Show processes with "bash" in the command
-ps -eo pid,user,comm,args | grep bash
-
-# shellcheck disable=SC2009 (ignoring shellcheck warning)
-# Display in a user-oriented format (optional)
-# printf "%-8s %-8s %-20s %-8s %-6s %-6s %s\n" "PID" "USER" "COMMAND" "PPID" "%CPU" "%MEM" "ARGS"
-
-# This line is commented out as it's not required for the task
-# # Show process hierarchy (optional)
-# # processes=$(ps -eo pid,ppid,comm,args | sort -k 2)
-# # while IFS= read -r pid ppid comm args; do
-# #   indent=$(( $(echo "$ppid" | wc -w) * 2 ))
-# #   printf "%${indent}s %-8s %-8s %-20s %-8s %-6s %-6s %s\n" "" "$pid" "$comm" "$ppid" "" "" "$args"
-# # done <<< "$processes"
-
+# shellcheck disable=SC2009
+ps aux --forest | grep bash

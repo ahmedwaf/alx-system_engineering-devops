@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
 
 # Show all processes, including without TTY
-ps -eo pid,user,comm,ppid,%cpu,%mem,args
-
-# Display in a user-oriented format
-printf "%-8s %-8s %-20s %-8s %-6s %-6s %s\n" "PID" "USER" "COMMAND" "PPID" "%CPU" "%MEM" "ARGS"
-
-# Show process hierarchy (indent based on process level)
-processes=$(ps -eo pid,ppid,comm,args | sort -k 2)
-while IFS= read -r pid ppid comm args; do
-	  indent=$(( $(echo "$ppid" | wc -w) * 2 ))
-	    printf "%${indent}s %-8s %-8s %-20s %-8s %-6s %-6s %s\n" "" "$pid" "$comm" "$ppid" "" "" "$args"
-    done <<< "$processes"
+ps aux --forest
